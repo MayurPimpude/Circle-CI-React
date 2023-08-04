@@ -16,7 +16,7 @@ jobs:
 
       # Install npm dependencies
       - run:
-          name: Install Dependencies
+          name: Build the React app
           command: npm install
 
       # Save node_modules to cache to speed up future builds
@@ -28,3 +28,9 @@ jobs:
       - run: npm test
 
       - run: npm start
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
