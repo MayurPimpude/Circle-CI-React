@@ -65,4 +65,4 @@ jobs:
 
       - run: npm build
 
-      - run: npm netlify:deploy
+      - run: npm deploy
